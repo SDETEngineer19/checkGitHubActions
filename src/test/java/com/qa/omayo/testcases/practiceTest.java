@@ -1,8 +1,11 @@
 package com.qa.omayo.testcases;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -33,6 +36,12 @@ public class practiceTest {
 		Assert.assertEquals("omayo (QAFox.com)", title);
 	}
 	
+	@Test
+	public void tc001_validateButtons() {
+		
+		List<WebElement> listOfButtons = driver.findElements(By.tagName("//button"));
+		Assert.assertEquals(listOfButtons.size(), 16);
+	}
 	
 	@AfterMethod
 	public void tearDown() {
