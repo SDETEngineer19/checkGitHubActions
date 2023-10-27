@@ -39,8 +39,8 @@ public class practiceTest {
 	@Test
 	public void tc001_validateButtons() {
 		
-		List<WebElement> listOfButtons = driver.findElements(By.tagName("//button"));
-		Assert.assertEquals(listOfButtons.size(), 16);
+		List<WebElement> listOfButtons = driver.findElements(By.xpath("//button"));
+		Assert.assertEquals(listOfButtons.size(), 13);
 	}
 	
 	@AfterMethod
