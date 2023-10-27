@@ -31,7 +31,7 @@ public class practiceTest {
 		argumentsList.add("--ignore-ssl-errors=yes");
 		argumentsList.add("--ignore-certificate-errors");
 		argumentsList.add("--disable-dev-shm-usage");
-
+		argumentsList.add("--headless=new");
 		options.addArguments(argumentsList);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
