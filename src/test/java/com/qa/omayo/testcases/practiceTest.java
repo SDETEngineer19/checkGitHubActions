@@ -52,6 +52,13 @@ public class practiceTest {
 		List<WebElement> listOfButtons = driver.findElements(By.xpath("//button"));
 		Assert.assertEquals(listOfButtons.size(), 13);
 	}
+	
+	@Test
+	public void tc002_validateLinks() {
+
+		List<WebElement> listofAnchorTags = driver.findElements(By.xpath("//a"));
+		Assert.assertEquals(listofAnchorTags.size(), 27);
+	}
 
 	@AfterMethod
 	public void tearDown() {
